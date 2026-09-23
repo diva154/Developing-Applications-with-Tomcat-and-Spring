@@ -11,16 +11,16 @@ import java.util.stream.Collectors;
 @Service
 public class CarServiceImpl implements CarService{
     private final List<Car> carList;
-    private final CarService carService;
 
-    public CarServiceImpl(CarService carService){
+    public CarServiceImpl(){
+
         carList = new ArrayList<>();
         carList.add(new Car("BMW",3,2021));
         carList.add(new Car("KIA",2,2013));
         carList.add(new Car("Mercedes",1,2014));
         carList.add(new Car("Audi",7,2020));
         carList.add(new Car("Fiat",4,2000));
-        this.carService = carService;
+
     }
     @Override
     public List<Car>getCars(Integer count){
